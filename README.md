@@ -1,22 +1,19 @@
 # Laravel Commentable
 
-[![Build Status](https://img.shields.io/travis/artisanry/Commentable/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Commentable)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/commentable.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/artisanry/Commentable.svg?style=flat-square)](https://github.com/artisanry/Commentable/releases)
-[![License](https://img.shields.io/packagist/l/artisanry/Commentable.svg?style=flat-square)](https://packagist.org/packages/artisanry/Commentable)
+I do not plan on maintaining this package, use it at your own risk.
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require artisanry/commentable
+$ composer require benjivm/commentable
 ```
 
 To get started, you'll need to publish the vendor assets and migrate:
 
 ```
-php artisan vendor:publish --provider="Artisanry\Commentable\CommentableServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Benjivm\Commentable\CommentableServiceProvider" && php artisan migrate
 ```
 
 ## Usage
@@ -29,7 +26,7 @@ php artisan vendor:publish --provider="Artisanry\Commentable\CommentableServiceP
 namespace App;
 
 
-use Artisanry\Commentable\Traits\HasComments;
+use Benjivm\Commentable\Traits\HasComments;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -94,7 +91,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to bvmiller@mail.sfsu.edu. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
