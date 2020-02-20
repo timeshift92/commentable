@@ -2,18 +2,9 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of Laravel Commentable.
- *
- * (c) Brian Faust <hello@basecode.sh>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace Benjivm\Commentable\Traits;
 
-namespace Artisanry\Commentable\Traits;
-
-use Artisanry\Commentable\Models\Comment;
+use Benjivm\Commentable\Models\Comment;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
@@ -54,7 +45,7 @@ trait HasComments
 
         $comment = (new $commentableModel())->createComment($this, $data, $creator);
 
-        if (!empty($parent)) {
+        if (! empty($parent)) {
             $parent->appendNode($comment);
         }
 
@@ -76,7 +67,7 @@ trait HasComments
 
         $comment = (new $commentableModel())->updateComment($id, $data);
 
-        if (!empty($parent)) {
+        if (! empty($parent)) {
             $parent->appendNode($comment);
         }
 
